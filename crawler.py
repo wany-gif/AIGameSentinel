@@ -26,8 +26,9 @@ def load_db():
     if os.path.exists(DB_FILE):
         with open(DB_FILE, 'r', encoding='utf-8') as f:
             try:
-                return json.load(f)
-            except json.JSONDecodeError:
+                data = json.load(f)
+                return data if isinstance(data, list) else []
+            except (json.JSONDecodeError, ValueError):
                 return []
     return []
 
@@ -63,7 +64,6 @@ def get_ai_insight(title, summary):
             return f"❌ AI 분석 실패: {error_msg[:100]}..."
 
 def send_to_slack(text, link, source, title):
-    # 슬랙 메시지 구조 개선: 제목 클릭 가능하게 변경
     payload = {
         "blocks": [
             {
@@ -72,7 +72,7 @@ def send_to_slack(text, link, source, title):
             },
             {
                 "type": "section",
-                "text": {"type": "mrkdwn", "text": f"*제목: <{link}|{title}>*"} # 클릭 가능한 제목
+                "text": {"type": "mrkdwn", "text": f"*제목: <{link}|{title}>*"}
             },
             {
                 "type": "section",
@@ -89,30 +89,34 @@ def main():
     new_items = []
 
     for name, url in RSS_FEEDS.items():
-        print(f"Checking {name}...")
-        feed = feedparser.parse(url)
-        for entry in feed.entries[:5]: # 각 사이트별 최신 5개만 확인
-            if entry.link not in processed_links:
-                print(f"New item found: {entry.title}")
-                # AI 요약 및 인사이트 생성
-                insight = get_ai_insight(entry.title, entry.get('summary', entry.title))
-                
-                # 슬랙 전송 (이제 실제 제목도 함께 전달합니다)
-                send_to_slack(insight, entry.link, name, entry.title)
-                
-                # DB 업데이트
-                new_items.append({
-                    "title": entry.title,
-                    "link": entry.link,
-                    "source": name,
-                    "insight": insight
-                })
+        print(f"--- Checking {name} ({url}) ---")
+        try:
+            feed = feedparser.parse(url)
+            # 수집된 기사가 없는 경우 출력
+            if not feed.entries:
+                print(f"⚠️ No entries found for {name}. Checking data structure...")
+            
+            for entry in feed.entries[:2]: # 각 사이트별 최신 2개씩 수집 (테스트용)
+                if entry.link not in processed_links:
+                    print(f"✅ New item found in {name}: {entry.title}")
+                    insight = get_ai_insight(entry.title, entry.get('summary', entry.title))
+                    send_to_slack(insight, entry.link, name, entry.title)
+                    new_items.append({
+                        "title": entry.title,
+                        "link": entry.link,
+                        "source": name,
+                        "insight": insight
+                    })
+                else:
+                    print(f"⏩ {entry.title} is already processed.")
+        except Exception as e:
+            print(f"❌ Error while fetching {name}: {e}")
 
     if new_items:
         save_db(db + new_items)
-        print(f"{len(new_items)}건의 새로운 소식을 업데이트했습니다.")
+        print(f"🚀 {len(new_items)}건의 새로운 소식을 업데이트했습니다.")
     else:
-        print("새로운 소식이 없습니다.")
+        print("📭 새로운 소식이 없습니다.")
 
 if __name__ == "__main__":
     main()
