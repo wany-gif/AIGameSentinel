@@ -37,13 +37,18 @@ def save_db(data):
 
 def get_ai_insight(title, summary):
     prompt = f"""
-    너는 시니어 게임 개발자야. 아래 뉴스를 읽고 게임 개발자 관점에서 분석해줘.
+    너는 시니어 게임 개발자이자 AI 뉴스 큐레이터야. 아래 뉴스를 읽고 한국어로 분석해줘.
+    영어 기사인 경우 반드시 한국어로 번역해서 요약해.
+
     뉴스 제목: {title}
     뉴스 내용: {summary}
 
-    응답 형식:
-    1. 핵심 요약 (한글 3줄)
-    2. 💡 Game Dev Insight: (이 기술이 그래픽, 최적화, 혹은 NPC AI 등 게임 개발에 줄 구체적 영향 1문장)
+    응답 형식 (반드시 다음 형식을 지켜):
+    1. 📝 핵심 요약 (한글 3줄):
+       - (첫 번째 줄)
+       - (두 번째 줄)
+       - (세 번째 줄)
+    2. 💡 Game Dev Insight: (이 기술이 게임 개발, 그래픽, 최적화, NPC AI 등에 줄 구체적 영향 1문장)
     """
     try:
         response = model.generate_content(prompt)
@@ -53,15 +58,16 @@ def get_ai_insight(title, summary):
         return "AI 분석 실패 (링크를 직접 확인하세요)"
 
 def send_to_slack(text, link, source):
+    # 슬랙 메시지 구조 변경: 식별 문구 및 이모지 추가
     payload = {
         "blocks": [
             {
                 "type": "section",
-                "text": {"type": "mrkdwn", "text": f"*🚀 [{source}] New AI Insight*"}
+                "text": {"type": "mrkdwn", "text": f"*🛡️ [AI Game Sentinel] New Update from {source}*"}
             },
             {
                 "type": "section",
-                "text": {"type": "mrkdwn", "text": f"<{link}|*원문 링크 바로가기*>"}
+                "text": {"type": "mrkdwn", "text": f"*제목: {link}*"} # 제목 클릭 가능하게
             },
             {
                 "type": "section",
