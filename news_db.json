@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "log_type": "system",
+    "time": "Sun Mar  1 15:14:36 2026",
+    "msg": "🚀 Crawler Started..."
+  },
+  {
+    "link": "https://openai.com/index/our-agreement-with-the-department-of-war",
+    "title": "Our agreement with the Department of War"
+  },
+  {
+    "log_type": "system",
+    "time": "Sun Mar  1 15:14:50 2026",
+    "msg": "✅ Crawler Finished."
+  }
+]
