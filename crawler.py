@@ -30,31 +30,34 @@ def save_db(data):
     with open(DB_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-# 4. Gemini 호출 (가장 안정적인 모델명 사용)
+# 4. Gemini 호출 (더 안정적인 다중 모델 시도 방식)
 def get_ai_insight(title, summary):
+    if not GEMINI_API_KEY:
+        return "🚨 [분석 실패] GEMINI_API_KEY가 설정되지 않았습니다. GitHub Secrets를 확인해 주세요."
+
     clean_title = clean_html(title)
     clean_summary = clean_html(summary)
-    
     prompt = f"시니어 게임 개발자로서 다음 뉴스를 한국어로 3줄 요약하고 인사이트를 1문장으로 적어줘.\n제목: {clean_title}\n내용: {clean_summary}"
     
-    try:
-        genai.configure(api_key=GEMINI_API_KEY)
-        # 최신 SDK에서는 'gemini-1.5-flash'를 바로 사용합니다.
-        model = genai.GenerativeModel('gemini-1.5-flash')
-        response = model.generate_content(prompt)
-        if response and response.text:
-            return response.text
-    except Exception as e:
-        # 실패 시 1.0 Pro 모델로 시도
+    # 시도할 모델 이름 후보들
+    model_list = ['gemini-1.5-flash', 'gemini-1.5-flash-latest', 'gemini-1.5-pro', 'gemini-pro']
+    
+    errors = []
+    for m_name in model_list:
         try:
-            model_alt = genai.GenerativeModel('gemini-pro')
-            response = model_alt.generate_content(prompt)
-            return response.text
-        except:
-            return f"🚨 [분석 실패] {str(e)[:100]}"
-    return "🚨 [분석 실패] 응답 없음"
+            genai.configure(api_key=GEMINI_API_KEY)
+            model = genai.GenerativeModel(m_name)
+            response = model.generate_content(prompt)
+            if response and response.text:
+                return response.text
+        except Exception as e:
+            errors.append(f"{m_name}: {str(e)[:40]}")
+            continue
+            
+    return f"🚨 [모든 모델 실패] {', '.join(errors)}"
 
 def send_to_slack(text, link, source, title, category):
+    # 채널 분류: ai-gamedev 또는 ai-general
     webhook_url = WEBHOOK_GAMEDEV if category == "gamedev" else (WEBHOOK_GENERAL or WEBHOOK_GAMEDEV)
     clean_title = clean_html(title)
     
@@ -97,7 +100,7 @@ def main():
                         insight = get_ai_insight(entry.title, entry.get('summary', entry.title))
                         send_to_slack(insight, entry.link, name, entry.title, category)
                         new_items.append({"link": entry.link, "title": entry.title})
-                        time.sleep(2)
+                        time.sleep(2) # 할당량 보호
             except: continue
     
     if new_items:
