@@ -10,7 +10,8 @@ SLACK_WEBHOOK_URL = os.environ.get('SLACK_WEBHOOK_URL')
 
 # Gemini AI 설정
 genai.configure(api_key=GEMINI_API_KEY)
-model = genai.GenerativeModel('gemini-1.5-flash')
+# 모델 이름을 더 안정적인 latest 버전으로 변경
+model = genai.GenerativeModel('gemini-1.5-flash-latest')
 
 # 2. 뉴스 소스 (게임 개발자용 RSS)
 RSS_FEEDS = {
@@ -54,8 +55,14 @@ def get_ai_insight(title, summary):
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
-        print(f"AI 분석 에러: {e}")
-        return "AI 분석 실패 (링크를 직접 확인하세요)"
+        # 에러 원인을 더 구체적으로 슬랙에 전달하기 위해 리턴값 변경
+        error_msg = str(e)
+        if "API_KEY_INVALID" in error_msg:
+            return f"❌ AI 분석 실패: API 키가 올바르지 않습니다. (GitHub Secrets 확인 필요)"
+        elif "quota" in error_msg.lower():
+            return f"❌ AI 분석 실패: API 할당량 초과입니다. (잠시 후 다시 시도)"
+        else:
+            return f"❌ AI 분석 실패: {error_msg[:100]}..."
 
 def send_to_slack(text, link, source):
     # 슬랙 메시지 구조 변경: 식별 문구 및 이모지 추가
@@ -67,7 +74,7 @@ def send_to_slack(text, link, source):
             },
             {
                 "type": "section",
-                "text": {"type": "mrkdwn", "text": f"*제목: {link}*"} # 제목 클릭 가능하게
+                "text": {"type": "mrkdwn", "text": f"*원문 주소: {link}*"}
             },
             {
                 "type": "section",
