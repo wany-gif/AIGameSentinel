@@ -11,11 +11,10 @@ GEMINI_API_KEY = os.environ.get('GEMINI_API_KEY')
 WEBHOOK_GAMEDEV = os.environ.get('SLACK_WEBHOOK_URL')
 WEBHOOK_GENERAL = os.environ.get('SLACK_WEBHOOK_URL_GENERAL')
 
-# 2. HTML 태그 제거 함수
+# 2. HTML 태그 및 특수문자 제거 함수
 def clean_html(text):
     if not text: return ""
-    # <p>, <em> 등 모든 HTML 태그 제거
-    clean = re.compile('<.*?>')
+    clean = re.compile('<.*?>|&([a-z0-9]+|#[0-9]{1,6}|#x[0-9a-f]{1,6});')
     return re.sub(clean, '', text).strip()
 
 # 3. DB 관리
@@ -31,30 +30,29 @@ def save_db(data):
     with open(DB_FILE, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
 
-# 4. Gemini 호출 로직 (에러 대응 강화)
+# 4. Gemini 호출 (가장 안정적인 모델명 사용)
 def get_ai_insight(title, summary):
-    # HTML 태그 제거로 가독성 향상 및 프롬프트 정확도 높임
     clean_title = clean_html(title)
     clean_summary = clean_html(summary)
     
     prompt = f"시니어 게임 개발자로서 다음 뉴스를 한국어로 3줄 요약하고 인사이트를 1문장으로 적어줘.\n제목: {clean_title}\n내용: {clean_summary}"
     
-    # 404 에러 방지를 위한 가장 안전한 모델명 리스트 순차 시도
-    model_candidates = ['models/gemini-1.5-flash', 'models/gemini-pro', 'gemini-1.5-flash']
-    
-    last_err = ""
-    for m_name in model_candidates:
+    try:
+        genai.configure(api_key=GEMINI_API_KEY)
+        # 최신 SDK에서는 'gemini-1.5-flash'를 바로 사용합니다.
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        response = model.generate_content(prompt)
+        if response and response.text:
+            return response.text
+    except Exception as e:
+        # 실패 시 1.0 Pro 모델로 시도
         try:
-            genai.configure(api_key=GEMINI_API_KEY)
-            model = genai.GenerativeModel(m_name)
-            response = model.generate_content(prompt)
-            if response and response.text:
-                return response.text
-        except Exception as e:
-            last_err = str(e)
-            continue
-            
-    return f"🚨 [AI 분석 실패] 원인: {last_err[:100]}"
+            model_alt = genai.GenerativeModel('gemini-pro')
+            response = model_alt.generate_content(prompt)
+            return response.text
+        except:
+            return f"🚨 [분석 실패] {str(e)[:100]}"
+    return "🚨 [분석 실패] 응답 없음"
 
 def send_to_slack(text, link, source, title, category):
     webhook_url = WEBHOOK_GAMEDEV if category == "gamedev" else (WEBHOOK_GENERAL or WEBHOOK_GAMEDEV)
@@ -99,7 +97,7 @@ def main():
                         insight = get_ai_insight(entry.title, entry.get('summary', entry.title))
                         send_to_slack(insight, entry.link, name, entry.title, category)
                         new_items.append({"link": entry.link, "title": entry.title})
-                        time.sleep(1) # API 할당량 보호
+                        time.sleep(2)
             except: continue
     
     if new_items:
