@@ -28,5 +28,17 @@
     "link": "https://openai.com/index/introducing-the-stateful-runtime-environment-for-agents-in-amazon-bedrock",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "GPT-5.3 Instant System Card",
+    "link": "https://openai.com/index/gpt-5-3-instant-system-card",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "GPT-5.3 Instant: Smoother, more useful everyday conversations",
+    "link": "https://openai.com/index/gpt-5-3-instant",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
