@@ -160,5 +160,11 @@
     "link": "https://openai.com/index/why-codex-security-doesnt-include-sast",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Introducing GPT-5.4 mini and nano",
+    "link": "https://openai.com/index/introducing-gpt-5-4-mini-and-nano",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
