@@ -190,5 +190,11 @@
     "link": "https://openai.com/index/how-we-monitor-internal-coding-agents-misalignment",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Creating with Sora Safely",
+    "link": "https://openai.com/index/creating-with-sora-safely",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
