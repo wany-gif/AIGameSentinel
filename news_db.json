@@ -304,5 +304,35 @@
     "link": "https://openai.com/index/cyberagent",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Financial services",
+    "link": "https://openai.com/academy/financial-services",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Prompting fundamentals",
+    "link": "https://openai.com/academy/prompting",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Creating images with ChatGPT",
+    "link": "https://openai.com/academy/image-generation",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Using skills",
+    "link": "https://openai.com/academy/skills",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Analyzing data with ChatGPT",
+    "link": "https://openai.com/academy/data-analysis",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
