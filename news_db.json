@@ -424,5 +424,11 @@
     "link": "https://openai.com/index/axios-developer-tool-compromise",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "ChatGPT for finance teams",
+    "link": "https://openai.com/academy/finance",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
