@@ -646,5 +646,11 @@
     "link": "https://openai.com/index/advanced-account-security",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "How OpenAI delivers low-latency voice AI at scale",
+    "link": "https://openai.com/index/delivering-low-latency-voice-ai-at-scale",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
