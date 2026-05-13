@@ -796,5 +796,11 @@
     "link": "https://openai.com/index/autoscout24",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Building a safe, effective sandbox to enable Codex on Windows",
+    "link": "https://openai.com/index/building-codex-windows-sandbox",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
