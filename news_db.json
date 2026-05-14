@@ -802,5 +802,11 @@
     "link": "https://openai.com/index/building-codex-windows-sandbox",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Our response to the TanStack npm supply chain attack",
+    "link": "https://openai.com/index/our-response-to-the-tanstack-npm-supply-chain-attack",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
