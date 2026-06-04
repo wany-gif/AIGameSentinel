@@ -1048,5 +1048,11 @@
     "link": "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "How Wasmer used Codex to build a Node.js runtime for the edge",
+    "link": "https://openai.com/index/wasmer",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
