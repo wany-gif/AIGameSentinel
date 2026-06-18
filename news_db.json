@@ -1180,5 +1180,11 @@
     "link": "https://openai.com/index/introducing-life-sci-bench",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Using AI to help physicians diagnose rare genetic diseases affecting children",
+    "link": "https://openai.com/index/diagnose-rare-childhood-diseases",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
