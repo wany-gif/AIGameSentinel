@@ -1390,5 +1390,11 @@
     "link": "https://openai.com/index/a-scorecard-for-the-ai-age",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Safety and alignment in an era of long-horizon models",
+    "link": "https://openai.com/index/safety-alignment-long-horizon-models",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
