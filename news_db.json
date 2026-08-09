@@ -1678,5 +1678,11 @@
     "link": "https://news.hada.io/topic?id=32301",
     "source": "GeekNews",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Shopify가 재고 예약 시스템을 Redis에서 MySQL로 교체해 대규모 트래픽을 처리한 방법",
+    "link": "https://news.hada.io/topic?id=32303",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
