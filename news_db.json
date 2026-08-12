@@ -2302,5 +2302,17 @@
     "link": "https://news.hada.io/topic?id=32444",
     "source": "GeekNews",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Qwen3.8-2.4T",
+    "link": "https://news.hada.io/topic?id=32445",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "How RingCentral builds AI-native work from engineering to ops",
+    "link": "https://openai.com/index/ringcentral",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
