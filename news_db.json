@@ -3694,5 +3694,11 @@
     "link": "https://news.hada.io/topic?id=32711",
     "source": "GeekNews",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "악성 Rust 크레이트 arrayref, 빌드 과정에서 원격 페이로드 실행",
+    "link": "https://news.hada.io/topic?id=32715",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
