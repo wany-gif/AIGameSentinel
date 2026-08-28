@@ -4882,5 +4882,35 @@
     "link": "https://openai.com/index/what-students-gain-from-chatgpt-critical-thinking-training",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Show GN: cc-gemini-rewrite - Claude Code의 장황한 설명을 TUI 안에서 Gemini로 재작성해서 보기",
+    "link": "https://news.hada.io/topic?id=32972",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "GitHub PR에 급증한 ‘Claude 같은’ 문체 - 46만 건의 어휘 변화 분석",
+    "link": "https://news.hada.io/topic?id=32970",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Google Antigravity Teamwork - 여러 AI 에이전트가 장기 연구·개발을 함께 수행하는 기능",
+    "link": "https://news.hada.io/topic?id=32969",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Route 53 Files 출시",
+    "link": "https://news.hada.io/topic?id=32968",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Gemini 3.5 Transcribe: 실시간·녹음 음성을 정밀하게 텍스트로 변환",
+    "link": "https://news.hada.io/topic?id=32967",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
