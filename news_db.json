@@ -5368,5 +5368,41 @@
     "link": "https://openai.com/index/polimill",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Codex의 20X는 주간 사용량도 실제 20배, Claude는 5시간 한도만 20배",
+    "link": "https://news.hada.io/topic?id=33106",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Grok Bot으로 운영하는 엔지니어링 조직",
+    "link": "https://news.hada.io/topic?id=33105",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Kubernetes에서 Java JVM의 CPU·메모리 Request와 Limit",
+    "link": "https://news.hada.io/topic?id=33103",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "국토부, 테슬라 감독형 FSD는 국내 기준에 부적합, 미국산은 FTA로 예외",
+    "link": "https://news.hada.io/topic?id=33102",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "단일 HTML 파일로 만든 걸어 다니는 ASCII 사이버펑크 도시 [비디오]",
+    "link": "https://news.hada.io/topic?id=33101",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "OpenAI supports California’s bill to advance youth AI safety",
+    "link": "https://openai.com/index/supporting-california-bill-advance-ai-youth-safety",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
