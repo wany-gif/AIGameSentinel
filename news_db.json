@@ -7240,5 +7240,47 @@
     "link": "https://news.hada.io/topic?id=33558",
     "source": "GeekNews",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Rune, 오픈 소스로 공개",
+    "link": "https://news.hada.io/topic?id=33568",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "RubyGems 대규모 공격, OpenAI 에이전트 소행으로 추정",
+    "link": "https://news.hada.io/topic?id=33567",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Switchyard - OpenAI/Anthropic API 그대로 모델을 바꿔 쓰는 LLM 라우터",
+    "link": "https://news.hada.io/topic?id=33566",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "evergarden - 자연에서 영감을 얻은 색상 테마",
+    "link": "https://news.hada.io/topic?id=33565",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "모델은 스스로 통제를 벗어나지 않는다",
+    "link": "https://news.hada.io/topic?id=33564",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+    "link": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+    "link": "https://openai.com/index/cognition-devin-testing-with-astra",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
