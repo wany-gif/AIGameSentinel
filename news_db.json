@@ -8176,5 +8176,35 @@
     "link": "https://openai.com/index/model-misalignment-reporting-framework",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": ".NET 11의 성능 개선",
+    "link": "https://news.hada.io/topic?id=33819",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Show GN: 옆 팀 레포는 그쪽 Claude가 제일 잘 안다 — 세션 간 질의응답 브로커",
+    "link": "https://news.hada.io/topic?id=33818",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "NVIDIA, Rust 네이티브 GPU 프로그래밍 지원 발표",
+    "link": "https://news.hada.io/topic?id=33815",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Octane - React 프로그래밍 모델을 직접 DOM 코드로 컴파일하는 UI 프레임워크",
+    "link": "https://news.hada.io/topic?id=33814",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Pixel 10에서 C2PA 출처 정보 위조하기",
+    "link": "https://news.hada.io/topic?id=33813",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
