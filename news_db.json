@@ -8572,5 +8572,35 @@
     "link": "https://openai.com/index/hex-gpt-6-astra",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "100년 만에 처음 발견된 고양잇과 신종",
+    "link": "https://news.hada.io/topic?id=33926",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Claude Code, 이제 AGENTS.md도 지원",
+    "link": "https://news.hada.io/topic?id=33925",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Typst, 큰 진전을 이루다",
+    "link": "https://news.hada.io/topic?id=33924",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Needle 3 - 작은 기기에서 자연어 명령을 처리하는 8~29MB AI 모델",
+    "link": "https://news.hada.io/topic?id=33923",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "jina-ocr-v1 - 저가형 GPU에서 더 빠르게 문서를 파싱하는 모델",
+    "link": "https://news.hada.io/topic?id=33922",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
