@@ -12982,5 +12982,41 @@
     "link": "https://openai.com/index/stack-overflow-chatgpt-plugin",
     "source": "OpenAI",
     "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "NVIDIA Run:ai - 여러 팀이 GPU를 나눠 쓰도록 관리하는 Kubernetes 기반 플랫폼",
+    "link": "https://news.hada.io/topic?id=35507",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "iroh 1.0까지의 여정 - IPFS 구현에서 공개 키 기반 연결 라이브러리로",
+    "link": "https://news.hada.io/topic?id=35506",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Show GN: 테슬라 로드스터 시뮬레이터, 킥플립 시뮬레이터",
+    "link": "https://news.hada.io/topic?id=35505",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "Linus Torvalds “AI 사용을 금지하지 않겠다. 자신이 하는 일을 이해해야 한다”",
+    "link": "https://news.hada.io/topic?id=35504",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "B2B에서 YouTube로 잠재 고객을 확보하는 방법",
+    "link": "https://news.hada.io/topic?id=35503",
+    "source": "GeekNews",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
+  },
+  {
+    "title": "How Itaú is building generative AI for its entire customer base",
+    "link": "https://openai.com/index/itau-generative-ai",
+    "source": "OpenAI",
+    "insight": "AI 분석 실패 (링크를 직접 확인하세요)"
   }
 ]
